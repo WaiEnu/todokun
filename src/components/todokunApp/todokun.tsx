@@ -12,14 +12,13 @@ const jotai = [
 ]
 
 const TodoKun: React.FC = () => {
-    const [get, setGet] = useState(false);
     const [id, setId] = useState(0);
     const generateId = () => {
         setId(Math.floor(Math.random() * jotai.length));
 
     };
     const j = jotai[Math.floor(id)];
-    const todokun = get ? spetial : j.text;
+    const todokun = j.text;
   return (
     <div>
       <div>{todokun}</div>
