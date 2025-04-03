@@ -10,7 +10,6 @@ const jotai = [
     { id:6, text: "トドくんは勉強をしている"},
     { id:7, text: "トドくんは人生という道に迷った"},
 ]
-const spetial = "トドくんは魚を手に入れた"
 
 const TodoKun: React.FC = () => {
     const [get, setGet] = useState(false);
