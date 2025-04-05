@@ -31,6 +31,7 @@ export const useTask = () => {
   const addTask = () => {
     if (newTask.trim()) {
       generateId();
+      console.log(todokun);
       setTasks([...tasks, { id: Date.now(), text: newTask }]);
       setNewTask("");
     }
@@ -38,6 +39,7 @@ export const useTask = () => {
 
   const removeTask = (id: number) => {
     generateId();
+    console.log(todokun);
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
