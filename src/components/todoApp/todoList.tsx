@@ -7,7 +7,6 @@ const TodoApp: React.FC = () => {
   const { tasks, newTask, setNewTask, addTask, removeTask } = useTask();
   return (
     <div>
-      <h1>ToDo-kun App</h1>
       <input
         type="text"
         value={newTask}

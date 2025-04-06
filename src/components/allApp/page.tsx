@@ -4,8 +4,8 @@ import Todokun from '../todokunApp/todokun';
 const Page: React.FC = () => {
   return (
     <div>
-    <Todokun />
-    <ToDo />
+      <Todokun />
+      <ToDo />
     </div>
   );
 };

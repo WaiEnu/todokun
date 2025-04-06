@@ -1,21 +1,15 @@
 ---
+import Layout from '../layouts/layout.astro';
 import Page from '../components/allApp/page';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Astro Basics</title>
-	</head>
-	<body>
+<Layout title="todokun App">
+	<main>
 		<Page client:load/>
-	</body>
-</html>
+	</main>
+</Layout>
 
 <style>
 	html,
