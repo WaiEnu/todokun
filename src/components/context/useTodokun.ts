@@ -15,4 +15,5 @@ import { atom, action } from "nanostores";
 
   export const generateTodokun = action(todokun, "generateTodokun", (store) => {
     store.set(generateRondom());
+    console.log(todokun);
   });
