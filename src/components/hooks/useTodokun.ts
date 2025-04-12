@@ -17,4 +17,4 @@ const jotai = [
   const [todokun, setTodokun] = useState(generateRondom());
   const generateId = () => {
       setTodokun(generateRondom());
-  };//todokun
+  };
