@@ -1,6 +1,5 @@
 import { atom, action } from "nanostores";
 
-
   const generateId = (length) => {
       const id = Math.random() * (length - 1);
       return Math.floor(id);
