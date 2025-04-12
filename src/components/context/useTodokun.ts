@@ -1,15 +1,20 @@
 import { atom, action } from "nanostores";
 import { getTagsService } from "../services/get-tags";
 
-export const id = atom<number>(0);
 
-const rand = () => {
-  return Math.floor(Math.random() * (jotaiLength - 1))
-}
+  const generateId = (length) => {
+      const id = Math.random() * (length - 1);
+      return Math.floor(id);
+  }
 
-export const generateId = action(id, "generateId", (store) => {
-  const newId = rand();
-  store.set(newId);
-});
+  const generateRondom = () => {
+      const id = generateRondomId(jotai.length);
+      const j = jotai[id];
+      return j;
+  }
 
+  export const todokun = atom<Todokun>(generateRondom());
 
+  export const generateTodokun = action(todokun, "generateTodokun", (store) => {
+    store.set(generateRondom());
+  });
