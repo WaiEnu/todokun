@@ -9,9 +9,7 @@ const rand = () => {
 
 export const generateId = action(id, "generateId", (store) => {
   const newId = rand();
-  if (newId) {
-    store.set(newId);
-  }
+  store.set(newId);
 });
 
 
