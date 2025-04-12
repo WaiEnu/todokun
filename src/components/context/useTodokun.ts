@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
+import jotaiLength from "../types/jotai"
 
 interface IdContextType {
   id: number;
@@ -11,9 +12,12 @@ export const IdProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
 
-  const [id, setId] = useState(0);
-  const generateId = (length) => {
-      const id = Math.floor(Math.random() * (length - 1));
+  const [id, setId] = useState(rand());
+  const rand = () => {
+    return Math.floor(Math.random() * (jotaiLength - 1))
+  }
+  const generateId = (rand()) => {
+      const id = ;
       setId(id)
       return id;
   };
