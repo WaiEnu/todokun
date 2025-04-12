@@ -15,5 +15,5 @@ export const useTodokun = () => {
       setTodokun(generateRondom());
   };
 
-  return { todokun, setTodokun, jotai, generateId  };
+  return { todokun, setTodokun, generateId  };
 };
