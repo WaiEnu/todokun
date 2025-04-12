@@ -30,7 +30,7 @@ export const IdProvider: React.FC<{ children: React.ReactNode }> = ({
   return <IdContext.Provider value={value}>{children}</IdContext.Provider>;
 };
 
-export const useTodokun = () => {
+export const useId = () => {
   const context = useContext(IdContext);
   if (context === undefined) {
     throw new Error("useTodokun must be used within a IdProvider");
