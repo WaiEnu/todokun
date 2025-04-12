@@ -1,19 +1,6 @@
-import { jotai} from "../types/jotai";
-import { useTask } from "../hooks/useTodokun";
-import { useId } from "../context/useTodokun";
-import { useState } from "react";
+import { todokun, generateTodokun } from "../context/useTodokun";
 
 const TodoKun: React.FC = () => {
-  const { todokun, setTodokun } = useTask();
-  const { id, generateId } = useId();
-  const generateTodokun = () =>{
-    const newId = generateId();
-    setTodokun(jotai[newId])
-  }
-  useEffect(() => {
-    console.log(id)
-    setTodokun(jotai[id])
-  },[id])
 
   return (
     <div>
