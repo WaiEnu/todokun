@@ -1,39 +1,17 @@
-import { createContext, ReactNode, useState } from "react";
-import jotaiLength from "../types/jotai"
+import { atom, action } from "nanostores";
+import { getTagsService } from "../services/get-tags";
 
-interface IdContextType {
-  id: number;
-  generateId: () => number;
+export const id = atom<number>(0);
+
+const rand = () => {
+  return Math.floor(Math.random() * (jotaiLength - 1))
 }
 
-const IdContext = createContext<IdContextType>();
-
-export const IdProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-
-  const [id, setId] = useState(rand());
-  const rand = () => {
-    return Math.floor(Math.random() * (jotaiLength - 1))
+export const generateId = action(id, "generateId", (store) => {
+  const newId = rand();
+  if (newId) {
+    store.set(newId);
   }
-  const generateId = (rand()) => {
-      const id = ;
-      setId(id)
-      return id;
-  };
+});
 
-  const value = {
-    id,
-    generateId
-  };
 
-  return <IdContext.Provider value={value}>{children}</IdContext.Provider>;
-};
-
-export const useId = () => {
-  const context = useContext(IdContext);
-  if (context === undefined) {
-    throw new Error("useTodokun must be used within a IdProvider");
-  }
-  return context;
-};
