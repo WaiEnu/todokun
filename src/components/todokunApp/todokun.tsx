@@ -6,6 +6,10 @@ import { useState } from "react";
 const TodoKun: React.FC = () => {
   const { todokun, setTodokun } = useTask();
   const { id, generateId } = useId();
+  const generateTodokun = () =>{
+    const newId = generateId();
+    setTodokun(jotai[newId])
+  }
   useEffect(() => {
     console.log(id)
     setTodokun(jotai[id])
@@ -17,7 +21,7 @@ const TodoKun: React.FC = () => {
         <img src={todokun.image} width="150" height="150" alt="todokun" />
       </div>
       <div>{todokun.text}</div>
-      <button onClick={generateId}>トドくん</button>
+      <button onClick={generateTodokun}>トドくん</button>
     </div>
   );
 };
