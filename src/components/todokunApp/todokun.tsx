@@ -1,15 +1,11 @@
 import { useTask } from "../hooks/useTodokun";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const TodoKun: React.FC = () => {
   const { todokun, generateId } = useTask();
   const [message, setMasseage] = useState(todokun.text);
   const [image, setImage] = useState(todokun.image);
-  useEffect(() => {
-    setMasseage(todokun.text);
-    setImage(todokun.image);
-    console.log(todokun,"app");
-  }, [todokun]);
+
   return (
     <div>
       <div>
