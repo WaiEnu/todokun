@@ -2,7 +2,7 @@ import { useTask } from "../hooks/useTodokun";
 import { useState } from "react";
 
 const TodoKun: React.FC = () => {
-  const { todokun, generateId } = useTask();
+  const { todokun, setTodokun } = useTask();
 
   return (
     <div>
