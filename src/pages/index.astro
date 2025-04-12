@@ -1,14 +1,18 @@
 ---
 import Layout from '../layouts/layout.astro';
-import Page from '../components/allApp/page';
+import ToDo from '../todoApp/todoList';
+import Todokun from '../todokunApp/todokun';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="todokun App">
-	<main>
-		<Page client:only="react" />
-	</main>
+  <main>
+    <div>
+      <Todokun client:only="react" />
+      <ToDo client:only="react" />
+    </div>
+  </main>
 </Layout>
 
 <style>
