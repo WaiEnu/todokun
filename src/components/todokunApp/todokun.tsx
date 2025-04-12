@@ -1,4 +1,4 @@
-import { useTask } from "../hooks/useTask";
+import { useTask } from "../hooks/useTodokun";
 import { useEffect, useState } from "react";
 
 const TodoKun: React.FC = () => {
