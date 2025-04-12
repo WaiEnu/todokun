@@ -9,10 +9,13 @@ const jotai = [
       { id:6, text: "トドくんは勉強をしている", image: "/public/image/todokun6.PNG"},
       { id:7, text: "トドくんはマインドフルネスに目覚めている", image: "/public/image/todokun7.PNG" },
   ]
-
+  const generateRondomId = (length) => {
+      const id = Math.random() * (length - 1);
+      return Math.floor(id);
+  }
   const generateRondom = () => {
-      const id = Math.random() * (jotai.length - 1);
-      const j = jotai[Math.floor(id)];
+      const id = generateRondomId(jotai.length);
+      const j = jotai[id];
       return j;
   }
   const [todokun, setTodokun] = useState(generateRondom());
