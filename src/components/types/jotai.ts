@@ -9,4 +9,4 @@ export const jotai = [
       { id:7, text: "トドくんはマインドフルネスに目覚めている", image: "/public/image/todokun7.PNG" },
 ]
 
-export jotaiLength = jotai.length;
+export const jotaiLength = jotai.length;
