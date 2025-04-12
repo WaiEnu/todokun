@@ -1,7 +1,6 @@
 import jotai from "../types/jotai"
 
 export const useTodokun = () => {
-
   const generateRondomId = (length) => {
       const id = Math.random() * (length - 1);
       return Math.floor(id);
@@ -16,6 +15,5 @@ export const useTodokun = () => {
       setTodokun(generateRondom());
   };
 
- 
   return { todokun, setTodokun, jotai, generateId  };
 };
