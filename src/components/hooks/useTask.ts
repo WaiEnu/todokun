@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { generateTodokun } from "../context/useTodokun";
 import { type Task } from "../types/task";
 
 export const useTask = () => {
@@ -7,16 +8,14 @@ export const useTask = () => {
 
   const addTask = () => {
     if (newTask.trim()) {
-      generateId();
-      console.log(todokun);
+      generateTodokun();
       setTasks([...tasks, { id: Date.now(), text: newTask }]);
       setNewTask("");
     }
   };
 
   const removeTask = (id: number) => {
-    generateId();
-    console.log(todokun);
+    generateTodokun();
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
