@@ -1,5 +1,4 @@
 import { atom, action } from "nanostores";
-import { getTagsService } from "../services/get-tags";
 
 
   const generateId = (length) => {
