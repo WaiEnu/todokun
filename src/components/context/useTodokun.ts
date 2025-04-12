@@ -37,6 +37,7 @@ export const TodokunProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const value = {
     todokun,
+    setTodokun,
     generateId
   };
 
