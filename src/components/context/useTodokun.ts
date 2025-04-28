@@ -1,12 +1,14 @@
 import { atom, action } from "nanostores";
+import { jotai } from "../types/jotai";
+import type { Todokun } from "../types/task";
 
-  const generateId = (length) => {
+  const generateId = (length:number) => {
       const id = Math.random() * (length - 1);
       return Math.floor(id);
   }
 
   const generateRondom = () => {
-      const id = generateRondomId(jotai.length);
+      const id = generateId(jotai.length);
       const j = jotai[id];
       return j;
   }
