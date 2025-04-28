@@ -15,7 +15,7 @@ import type { Todokun } from "../types/task";
 
   export const todokun = atom<Todokun>(generateRondom());
 
-  export const generateTodokun = action(todokun, "generateTodokun", (store) => {
+  export const generateTodokun = action(todokun, "generateTodokun", (store: { set: (arg0: Todokun) => void; }) => {
     store.set(generateRondom());
     console.log(todokun);
   });
